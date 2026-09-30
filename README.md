@@ -78,3 +78,9 @@ No Alembic dir (uses `create_all`); `nginx.conf`/SSL missing; Celery target fixe
 ## Future Improvements
 
 Alembic from day one; Redis-backed rate limits; replace Celery with `BackgroundTasks` or justify queue; replace FAISS with pgvector; drop LangChain wrappers for direct OpenAI calls; idempotency keys on ingest; integration + load tests; embedding-recall + faithfulness evals beyond the keyword probe.
+
+---
+
+## Maintenance
+
+Last maintained: 2026-09-30 – minor docs touch.
