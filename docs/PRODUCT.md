@@ -1,7 +1,7 @@
 # Lexora — Product Documentation
 
 > User-serving product guide (technical deep docs already in `docs/`).
-> Codebase: `/home/sajad/Projects/portfolio/lexora-ai` | Stack: FastAPI + PostgreSQL + Redis/Celery + FAISS + OpenAI | Tests: 35 unit, ~49% cov
+> Codebase: `/home/sajad/lexora-ai` | Stack: FastAPI + PostgreSQL + Redis/Celery + FAISS + OpenAI | Tests: 35 unit, ~49% cov
 
 ## 1. What this product is
 
