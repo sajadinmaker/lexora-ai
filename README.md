@@ -1,5 +1,7 @@
 # Lexora
 
+[![ci](https://github.com/sajadinmaker/lexora-ai/actions/workflows/ci.yml/badge.svg)](https://github.com/sajadinmaker/lexora-ai/actions/workflows/ci.yml)
+
 Upload documents, ask questions with source attribution.
 
 ## Problem
@@ -83,4 +85,4 @@ Alembic from day one; Redis-backed rate limits; replace Celery with `BackgroundT
 
 ## Maintenance
 
-Last maintained: 2026-09-30 – minor docs touch.
+Last maintained: 2026-10-26 – full test suite rerun green (35 unit, ~49% cov); claims re-verified against code; CI green.
