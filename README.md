@@ -21,6 +21,12 @@ The LLM call is the easy part. Lexora is the rest of the system: validated uploa
 - `app/api/v1/` — auth, documents, and chat routers; SSE streaming on chat, pagination on documents
 - `scripts/eval_retrieval.py` — deterministic recall probe that runs without OpenAI
 
+## Demo
+
+![Lexora API surface](docs/demo.png)
+
+The backend booted on SQLite serving its OpenAPI surface at `/docs` (health and readiness check out `200`). Embedding-backed upload and chat need an OpenAI API key, so a screenshot of the API surface is the honest no-key demo.
+
 ## Problem
 
 Small teams need grounded Q&A over their own PDFs/TXT/Markdown/DOCX without building retrieval, auth, and background processing from scratch.
