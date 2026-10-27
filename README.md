@@ -2,7 +2,24 @@
 
 [![ci](https://github.com/sajadinmaker/lexora-ai/actions/workflows/ci.yml/badge.svg)](https://github.com/sajadinmaker/lexora-ai/actions/workflows/ci.yml)
 
-Upload documents, ask questions with source attribution.
+**Upload documents, ask questions, get answers with the source chunks cited.**
+
+The LLM call is the easy part. Lexora is the rest of the system: validated uploads, chunking and embedding, per-user FAISS vector isolation, a cached retrieval layer, Celery ingestion, and answers streamed over SSE with conversation history.
+
+| | |
+|---|---|
+| Stack | Python, FastAPI, PostgreSQL, Redis, Celery, FAISS, OpenAI (removable) |
+| Correctness | 35 unit tests, ~49% coverage, retrieval recall probe 3/3 at top-3 |
+| CI | Builds, tests, and Python checks on every push |
+| Isolation | Vectors are per-user directories; queries and indexes never cross tenants |
+| Streaming | Chat answers stream over SSE with conversation history persisted |
+
+**Where to look first**
+
+- `app/services/retrieval_service.py` — query embed, top-k, rank, context assembly
+- `app/services/vector_service.py` — per-user FAISS index management and rebuild-on-delete trade-off
+- `app/api/v1/` — auth, documents, and chat routers; SSE streaming on chat, pagination on documents
+- `scripts/eval_retrieval.py` — deterministic recall probe that runs without OpenAI
 
 ## Problem
 
